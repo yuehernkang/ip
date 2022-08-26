@@ -37,7 +37,7 @@ public class Duke {
         tasks = new TaskList(storage.loadData());
         Parser parser = new Parser(this.ui, tasks);
 
-        while(true) {
+        while (true) {
             //Parse -> Execute -> Print Result
             String input = sc.nextLine();
             Command c = parser.parse(input);
@@ -50,7 +50,7 @@ public class Duke {
      * @param args
      * @throws DukeException
      */
-    public static void main(String[] args) throws DukeException {
+    public static void main(String[] args) {
         new Duke("saved.txt").run();
     }
 }
